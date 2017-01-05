@@ -38,7 +38,7 @@ success：回调函数，参数为返回获取颜色的值
 2、通过js调用：
 
 我们需要将所需获取颜色的图片地址作为第一个参数传入，在返回的回调函数success参数obj中拿到我们所需的颜色值
-var draw = function(img) {
+<pre>var draw = function(img) {
 	var canvas = document.createElement("canvas");
 	canvas.id = 'canvas';
 	canvas.width = img.width;
@@ -66,7 +66,7 @@ $(document).ready(function () {
 	$(img).load(function () {
 		draw(img);
 	});
-});
+});</pre>
 
 3、说明：
 
