@@ -67,6 +67,7 @@ $(document).ready(function () {
 		draw(img);
 	});
 });
+
 3、说明：
 
 将图片复制到canvas，再在canvas上点击获取当前位置的颜色
