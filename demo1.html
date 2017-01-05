@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>使用canvas从图片中获取部分颜色示例</title>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/colorGet.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>canvas从图片中获取四角颜色示例</h2>
+		<small>（此处为四角顶点一像素图片颜色）</small>
+
+		<div class="paramItem">
+			<strong>点击以下图片列表切换示例图片：</strong>
+		</div>
+		<div class="inline-container" id="selectItem">
+			<img src="image/test.jpg" />
+			<img src="image/test1.jpg" />
+			<img src="image/test2.jpg" />
+			<img src="image/test.png" />
+		</div>
+		<div class="paramItem">
+			<strong>动态改变位置参数获取四角图片颜色：<small>（以下为示例图片）</small></strong>
+		</div>
+		<div class="inline-container">
+			<label>动态改变位置参数[point]：<br/>(0左上角、1右上角、2右下角、3左下角)</label>
+			<ul class="pointMenu">
+				<li>0</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<table class="colorTable">
+			<tr>
+				<td id="color0" width="50%">左上角</td>
+				<td rowspan="2">
+					<img id="clickedImg" src="image/test.jpg" />
+				</td>
+				<td id="color1" width="50%">右上角</td>
+			</tr>
+			<tr>
+				<td id="color3">右下角</td>
+				<td id="color2">左下角</td>
+			</tr>
+		</table>
+		<div class="inline-container" id="colorGet1-color"></div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+
+			$('#selectItem img').on('click',function(){
+				//初始化
+				$('table tr td').css('background','none');
+				$('.pointMenu li').removeClass('sel');
+				$('.pointMenu li:first-child').addClass('sel');
+				$('#colorGet1-color').empty();
+
+				var _src = $(this).attr('src');
+				$('#clickedImg').attr('src',_src);
+
+				colorGet.colors(_src,{
+					point:0,
+					success:function(obj){
+						$('#color0').css('background-color',obj.hex);
+						$('#colorGet1-color').html('位置[point]：0<br/>十六位颜色：'+obj.hex+'<br/>rgba颜色：'+obj.rgba+'<br/>rgb颜色：'+obj.rgb);
+					}
+				});
+			});
+
+			$('.pointMenu').on('click','li',function(){
+				$(this).addClass('sel').siblings().removeClass('sel');
+				var _point = $(this).text();
+				colorGet.colors($('#clickedImg').attr('src'),{
+					point:_point,
+					success:function(obj){
+						$('#color'+_point).css('background-color',obj.hex);
+						$('#colorGet1-color').html('位置[point]：'+_point+'<br/>十六位颜色：'+obj.hex+'<br/>rgba颜色：'+obj.rgba+'<br/>rgb颜色：'+obj.rgb);
+					}
+				});
+			});
+
+		});
+	</script>
+</body>
+</html>

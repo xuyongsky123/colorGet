@@ -3,19 +3,25 @@
 <head>
 	<meta charset="utf-8" />
 	<title>获取鼠标在图片上点击位置的颜色</title>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
 	<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/colorGetActive.js"></script>
 </head>
 <body>
+
+	<div class="container">
+		<h2>获取鼠标在图片上点击位置颜色示例</h2>
+		<div class="paramItem">
+			<strong>在以下图片上点击获取当前点击位置颜色：</strong>
+			<div class="center" id="canvasImg"></div>
+			<div id="colorGet2-color">
+
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript">
-		//禁止页面滑动（适合移动端）
-		var jinzhi=0;
-	    document.addEventListener("touchmove",function(e){
-	        if(jinzhi==0){
-	            e.preventDefault();
-	            e.stopPropagation();
-	        }
-	    },false);
 
 		var draw = function(img) {
 			var canvas = document.createElement("canvas");
@@ -25,7 +31,7 @@
 			var context = canvas.getContext("2d");
 			context.drawImage(img, 0, 0);
 
-			$('body').append(canvas);
+			$('#canvasImg').append(canvas);
 			var _T = $('#canvas');
 			_T.click(function (e) {
 				var canvasOffset = _T.offset();
@@ -35,8 +41,7 @@
 				// 获取该点像素的数据
 				var colorData = document.getElementById("canvas").getPixelColor(canvasX, canvasY);
 
-				$('div').remove();
-				$("body").append('<div style="height:200px;width:200px;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：<br/>'+colorData.hex+'<br/>'+colorData.rgba+'<br/>'+colorData.rgb+'</div>');
+				$("#colorGet2-color").html('<div style="height:100px;width:30%;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：<br/>十六位颜色：'+colorData.hex+'<br/>rgba颜色：'+colorData.rgba+'<br/>rgb颜色：'+colorData.rgb+'</div>');
 			});
 		}
 		$(document).ready(function () {
@@ -46,7 +51,7 @@
 				draw(img);
 			});
 		});
-
+		
 	</script>
 </body>
 </html>

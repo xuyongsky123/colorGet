@@ -21,7 +21,7 @@
 			if(!opts.point){
 				opts.point = 0;	//默认获取图片左上角颜色
 			}
-			switch(opts.point){
+			switch(parseInt(opts.point)){
 				case 0: //左上角
 					imageData = context.getImageData(0,0,1,1);
 					break;
