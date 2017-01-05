@@ -8,7 +8,7 @@ colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
 <h3>1、开始工作：</h3>
 
 我们需要在页面中引入：
-<pre><script type="text/javascript" src="....../colorGet.js"></script></pre>
+<div class="highlight highlight-text-html-basic"><pre><script type="text/javascript" src="....../colorGet.js"></script></pre></div>
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
 <pre><script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
 <h3>2、通过js调用：</h3>
@@ -74,3 +74,13 @@ $(document).ready(function () {
 <h3>4、兼容性：</h3>
 
 兼容IE9及以上支持canvas标签功能的浏览器
+
+
+
+<script type="text/javascript">
+	$('pre').each(function(){
+		var _tmp = $(this).html();
+		_tmp = _tmp.replace(new RegExp('<','gm'),'&lt;').replace(new RegExp('script-tag',"gm"),'script');
+		$(this).html(_tmp);
+	});
+</script>
