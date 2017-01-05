@@ -2,7 +2,7 @@
 js封装获取图片上颜色功能 （canvas getImageData）
 
 
-index.html:
+index.html:<a href="http://baidu.com">哈哈😄</a>
   js获取图片左上角、右上角、右下角、左下角四个位置的颜色；
 index2.html:
   js获取鼠标在图片上点击位置的颜色
