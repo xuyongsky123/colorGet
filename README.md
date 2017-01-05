@@ -1,6 +1,6 @@
 <h1>colorGet简介</h1>
 
-colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
+colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件<br/>
 <a href="#colorGet1">canvas从图片中获取四角颜色</a>
 <a href="#colorGet2">获取鼠标在图片上点击位置颜色</a>
 <h2>canvas从图片中获取四角颜色<a href="http://www.shdnfw.com/plugin/colorGet/demo1.html">canvas从图片中获取四角颜色示例</a></h2>
@@ -8,7 +8,7 @@ colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
 <h3>1、开始工作：</h3>
 
 我们需要在页面中引入：
-<div class="highlight highlight-text-html-basic"><pre><script type="text/javascript" src="....../colorGet.js"></script></pre></div>
+<pre><script type="text/javascript" src="....../colorGet.js"></script></pre>
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
 <pre><script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
 <h3>2、通过js调用：</h3>
