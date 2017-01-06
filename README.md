@@ -3,7 +3,8 @@
 colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件<br/>
 <a href="#colorGet1">canvas从图片中获取四角颜色</a><br/>
 <a href="#colorGet2">获取鼠标在图片上点击位置颜色</a>
-<h2>canvas从图片中获取四角颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo1.html">canvas从图片中获取四角颜色示例</a></h2>
+<hr/>
+<h2>canvas从图片中获取四角颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo1.html"><small>canvas从图片中获取四角颜色示例</small></a></h2>
 
 <h3>1、开始工作：</h3>
 
@@ -27,7 +28,8 @@ success：回调函数，参数为返回获取颜色的值
 <h3>4、兼容性：</h3>
 
 兼容IE9及以上支持canvas标签功能的浏览器
-<h2>获取鼠标在图片上点击位置颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo2.html">获取鼠标在图片上点击位置颜色示例</a></h2>
+<hr/>
+<h2>获取鼠标在图片上点击位置颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo2.html"><small>获取鼠标在图片上点击位置颜色示例</small></a></h2>
 
 <h3>1、开始工作：</h3>
 
