@@ -77,6 +77,3 @@ $(document).ready(function () {
 
 兼容IE9及以上支持canvas标签功能的浏览器
 
-<script>
-alert('ttt')
-</script>
