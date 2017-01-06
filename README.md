@@ -15,12 +15,14 @@ colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
 <h3>2、通过js调用：</h3>
 
 我们需要将所需获取颜色的图片地址作为第一个参数传入，在返回的回调函数success参数obj中拿到我们所需的颜色值
+```javascript
 <pre>colorGet.colors('image/test.jpg',{
 	point:0,
 	success:function(obj){
 		$('body').append('&lt;div style="height:100px;width:100px;background-color:'+obj.hex+'">&lt;/div>');
 	}
 });</pre>
+```
 <h3>3、参数说明：</h3>
 
 point：指定获取图片颜色的四个角中的位置（可取值0、1、2、3），0为左上角，1为右上角，2为右下角，3为左下角
