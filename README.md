@@ -10,7 +10,7 @@ colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
 
 我们需要在页面中引入：
 ```html
-&lt;script type="text/javascript" src="....../colorGet.js">&lt;/script>
+<script type="text/javascript" src="....../colorGet.js"></script>
 ```
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
 ```html
@@ -41,13 +41,18 @@ success：回调函数，参数为返回获取颜色的值
 <h3>1、开始工作：</h3>
 
 我们需要在页面中引入：
-<pre>&lt;script type="text/javascript" src="....../colorGetActive.js">&lt;/script></pre>
+```html
+<script type="text/javascript" src="....../colorGetActive.js"></script>
+```
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
-<pre>&lt;script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js">&lt;/script></pre>
+```html
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+```
 <h3>2、通过js调用：</h3>
 
 我们需要将所需获取颜色的图片地址作为第一个参数传入，在返回的回调函数success参数obj中拿到我们所需的颜色值
-<pre>var draw = function(img) {
+```javascript
+var draw = function(img) {
 	var canvas = document.createElement("canvas");
 	canvas.id = 'canvas';
 	canvas.width = img.width;
@@ -75,7 +80,8 @@ $(document).ready(function () {
 	$(img).load(function () {
 		draw(img);
 	});
-});</pre>
+});
+```
 
 <h3>3、说明：</h3>
 
