@@ -1,23 +1,23 @@
 <h1>colorGet简介</h1>
 
 colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件<br/>
-<a href="#colorGet1">canvas从图片中获取四角颜色</a>
+<a href="#colorGet1">canvas从图片中获取四角颜色</a><br/>
 <a href="#colorGet2">获取鼠标在图片上点击位置颜色</a>
-<h2>canvas从图片中获取四角颜色<a href="http://www.shdnfw.com/plugin/colorGet/demo1.html">canvas从图片中获取四角颜色示例</a></h2>
+<h2>canvas从图片中获取四角颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo1.html">canvas从图片中获取四角颜色示例</a></h2>
 
 <h3>1、开始工作：</h3>
 
 我们需要在页面中引入：
-<pre><script type="text/javascript" src="....../colorGet.js"></script></pre>
+<pre>&lt;script type="text/javascript" src="....../colorGet.js"></script></pre>
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
-<pre><script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
+<pre>&lt;script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
 <h3>2、通过js调用：</h3>
 
 我们需要将所需获取颜色的图片地址作为第一个参数传入，在返回的回调函数success参数obj中拿到我们所需的颜色值
 <pre>colorGet.colors('image/test.jpg',{
 	point:0,
 	success:function(obj){
-		$('body').append('<div style="height:100px;width:100px;background-color:'+obj.hex+'"></div>');
+		$('body').append('&lt;div style="height:100px;width:100px;background-color:'+obj.hex+'"></div>');
 	}
 });</pre>
 <h3>3、参数说明：</h3>
@@ -27,14 +27,14 @@ success：回调函数，参数为返回获取颜色的值
 <h3>4、兼容性：</h3>
 
 兼容IE9及以上支持canvas标签功能的浏览器
-<h2>获取鼠标在图片上点击位置颜色<a href="http://www.shdnfw.com/plugin/colorGet/demo2.html">获取鼠标在图片上点击位置颜色示例</a></h2>
+<h2>获取鼠标在图片上点击位置颜色&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.shdnfw.com/plugin/colorGet/demo2.html">获取鼠标在图片上点击位置颜色示例</a></h2>
 
 <h3>1、开始工作：</h3>
 
 我们需要在页面中引入：
-<pre><script type="text/javascript" src="....../colorGetActive.js"></script></pre>
+<pre>&lt;script type="text/javascript" src="....../colorGetActive.js"></script></pre>
 当然如果页面中你使用了jquery则相应的需要最先引入jquery (Bootstrap中文网开源项目免费 CDN 服务)：
-<pre><script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
+<pre>&lt;script type="text/javascript" src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script></pre>
 <h3>2、通过js调用：</h3>
 
 我们需要将所需获取颜色的图片地址作为第一个参数传入，在返回的回调函数success参数obj中拿到我们所需的颜色值
@@ -57,7 +57,7 @@ success：回调函数，参数为返回获取颜色的值
 		var colorData = document.getElementById("canvas").getPixelColor(canvasX, canvasY);
 
 		$('div').remove();
-		$("body").append('<div style="height:200px;width:200px;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：<br>'+colorData.hex+'<br>'+colorData.rgba+'<br>'+colorData.rgb+'</div>');
+		$("body").append('&lt;div style="height:200px;width:200px;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：&lt;br>'+colorData.hex+'&lt;br>'+colorData.rgba+'&lt;br>'+colorData.rgb+'</div>');
 	});
 }
 $(document).ready(function () {
@@ -75,12 +75,3 @@ $(document).ready(function () {
 
 兼容IE9及以上支持canvas标签功能的浏览器
 
-
-
-<script type="text/javascript">
-	$('pre').each(function(){
-		var _tmp = $(this).html();
-		_tmp = _tmp.replace(new RegExp('<','gm'),'&lt;').replace(new RegExp('script-tag',"gm"),'script');
-		$(this).html(_tmp);
-	});
-</script>
