@@ -23,7 +23,7 @@ colorGet是基于html5 canvas对图片处理获取颜色值功能的封装插件
 colorGet.colors('image/test.jpg',{
 	point:0,
 	success:function(obj){
-		$('body').append('&lt;div style="height:100px;width:100px;background-color:'+obj.hex+'">&lt;/div>');
+		$('body').append('<div style="height:100px;width:100px;background-color:'+obj.hex+'"></div>');
 	}
 });
 ```
@@ -71,7 +71,7 @@ var draw = function(img) {
 		var colorData = document.getElementById("canvas").getPixelColor(canvasX, canvasY);
 
 		$('div').remove();
-		$("body").append('&lt;div style="height:200px;width:200px;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：&lt;br>'+colorData.hex+'&lt;br>'+colorData.rgba+'&lt;br>'+colorData.rgb+'&lt;/div>');
+		$("body").append('<div style="height:200px;width:200px;display:inline-block;background-color:'+colorData.hex+'">当前点击位置颜色：<br>'+colorData.hex+'<br>'+colorData.rgba+'<br>'+colorData.rgb+'</div>');
 	});
 }
 $(document).ready(function () {
